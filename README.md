@@ -1,6 +1,5 @@
 # ÏLUN KINEM!
 
----
 ### What is this?
 
 This is **dwarf tavern simulator**. It's a silly project from 2 computer sciences students. Inspiration for us was a game **Dwarf Fortress** (we recomend you to play it).

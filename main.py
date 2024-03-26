@@ -10,72 +10,75 @@ for each_line in file:
 
 
 class Dwarf:
-    # IN CAPITALISM WE LOVE MONEY
-    money = 0
-    # How drunk is dwarf
+    beers = 0
     drunkenness = 0
 
-    # PLACE HOLDER
-    def introduce(self):
-        print("hello i am ", self.name, " and I have: ", self.money)
-
-    # Constructor of dwarf object
-    def __init__(self, name, money = None):
-
+    def __init__(self, name):
         self.name = name
-        self.money = money
-
-        # Append dwarf to list of dwarfs
-        DwarfList.append(self)
-
-        # Generating a money if amount of money is not inputted
-        if money == None:
-            self.money = rng.randint(0, 50)
-
+        self.money = rng.randint(0, 40)
         self.introduce()
 
-    # Increase of drunkenness for single dwarf
-    # amount - how many beers dwarf will drink
-    def drinks(self, amount = 1):
+    def drinks(self, amount=1):
+        if amount > self.beers:
+            print(f'I don\'t have {amount} beers. I have {self.beers} beers.')
+            return
+
         self.drunkenness += amount
-        print(self.drunkenness)
+        self.beers = 0
+        print(f'{self.name} is {self.drunkenness} level of drunkenness')
 
-# PARTY TIME !!! Dwarf are happy and they want to celebrate.
-# Every one drinks
+    def introduce(self):
+        print("hello i am", self.name, "and I have:", self.money)
 
+    def buying_drinks(self):
+
+        if self.money >= 2:
+            self.beers += 1
+            self.money -= 2
+            print(f'{self.name} said: Give me a drink, bartender!')
+            print(f'I have {self.beers} beers!')
+        else:
+            print(f'{self.name} said: Ulrich, take care of me! I\'m very poor. I have {self.money} in my pocket.')
+        print('\n')
 
 def party_time():
-    print("Party Time! Everyone Drinks!")
+    print("Party Time! Everyone Drinks!\n")
+    a.drinks()
+    b.drinks()
+    c.drinks()
 
-'''
-def beer_round(drinkers):
-    drinkers =
-'''
 
-# A heart of simulations. Here all event's will happen.
-def eventManeger(turns, turn):
-    i = 0
+# def beer_round(drinkers):
+
+""" A heart of simulations. Here all event's will happen. """
+
+
+def eventManeger(turn):
     while True:
         turn += 1
-        i += 1
-        print(i)
-        if i % 6 == 0:
+        print(turn)
+        if turn % 6 == 0:
+            a.buying_drinks()
+            b.buying_drinks()
+            c.buying_drinks()
             party_time()
 
         user_continues = input("continue?Y/N")
         if user_continues != "Y":
             exit()
 
-turn = 0
-turns = 0
-
 # Loop for creation dwarfs
 # TO DO
-for balls in DwarfList:
-    x = balls
-    Dwarf(DwarfList[x])
+# for balls in DwarfList:
+#     x = balls
+#     Dwarf(DwarfList[x])
+#     buying_drinks()
 
-eventManeger(1, turn)
+a = Dwarf(DwarfList[0])
+b = Dwarf(DwarfList[1])
+c = Dwarf(DwarfList[2])
+
+eventManeger(0)
 
 # if there is a error with file
 # except:

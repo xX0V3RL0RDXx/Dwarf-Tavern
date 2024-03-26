@@ -6,7 +6,7 @@ DwarfList = []
 file = open("dwarfes.txt", "r")
 
 for each_line in file:
-    DwarfList.append(file.readline().rstrip())
+    DwarfList.append(each_line.rstrip())
 
 
 class Dwarf:

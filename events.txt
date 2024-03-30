@@ -1,0 +1,3 @@
+party_time()
+puke()
+another_one()

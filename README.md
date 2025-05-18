@@ -11,8 +11,7 @@ The entire simulation operates on a turn-based system.
 During each turn, something may happen — and if the dwarves are happy, you know what that means... they `DRINK!`
 
 ---
-
-## How does it work?
+### 🙋‍♂️ How does it work?
 
 There are a few steps before the simulation begins.
 
@@ -29,6 +28,7 @@ The tavern requires two parameters:
 - `tavernName` — a string describing the name of the tavern
 
 - `tavernSupplyOfBeer` — an integer describing the amount of beer in stockpiles.
+---
 ### 🧾 Second Step: The Guest List
 
 The program uses a `.txt` file where you list the names of the dwarves — one per line.  
@@ -63,7 +63,6 @@ for each_dwarf in DwarfNameList:
 Remember, **dwarves don't drink alone!** So, if there is a single dwarf in the tavern, he can't drink and simulation will end.
 
 ---
-
 ### ⛏ Second Step: Creating the Dwarves
 
 Each name becomes a **Dwarf object**, with the following properties:

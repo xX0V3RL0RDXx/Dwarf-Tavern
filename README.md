@@ -86,7 +86,11 @@ Where:
 The amount of money is generated randomly, but you can also set it manually for all dwarves. Money is needed for buying beers. Two pieces of gold are needed to buy one goblet of beer.
 
 After creating each dwarf, they kindly introduce themselves by using `introduce()` method.
-![img.png](img.png)
+
+```txt
+Greetings, I'm Fosdrod Runeshaper and I have 8 coins in my pocket. 
+
+```
 ---
 
 ### 🍻 Starting the Simulation
@@ -139,6 +143,7 @@ More dwarves.
 More taverns.
 And a whole lot of good old-fashioned BEER.
 (Maybe even graphics… who knows?)
+
 ---
  
 ### 📯 Send a Raven (Or Just Email Us)
